@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://pinterest.com/ideas/glitch-core-gif/894444041268" width="600" />
+  <![gif dream core](https://pinterest.com/ideas/glitch-core-gif/894444041268) width="600" />
 </p>
 
 # Saudações, Eu sou o [Billy] ☮️
