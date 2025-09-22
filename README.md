@@ -1,11 +1,4 @@
-## Salve 😶‍🌫️
-
-
-<p align="center">
-  <img src="https://giphy.com/explore/dreamcore" width="600" />
-</p>
-
-# Saudações, Eu sou o [Billy] ☮️
+# Salve 😶‍🌫️, Eu sou o [Billy] ☮️
 
 ## A Jornada pelas Terras Intermédias do Código
 
