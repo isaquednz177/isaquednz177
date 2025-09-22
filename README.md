@@ -1,4 +1,4 @@
-# Salve 😶‍🌫️, Eu sou o [Billy] ☮️
+# Salve do [Billy] ☮️
 
 ## A Jornada pelas Terras Intermédias do Código
 
