@@ -7,7 +7,7 @@ Sou um estudante de **Inteligência Artificial** e **Engenharia de Software**. M
 - 🌱 **Buscando a sabedoria de:** JavaScript
 - 💬 **Pergunte-me sobre:** Redes Neurais, Design Patterns e a lore de Elden Ring!
 - 📫 **Contato:** [isaquednz177@gmail.com] ou pelas redes abaixo.
-
+- 🏳️ Conhecimento básico de inglês e Francês, em processo de aprimoramento.
 ## ⚔️ (Habilidades e Ferramentas)
 
 ## 📊 (Estatísticas do GitHub)
