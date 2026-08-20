@@ -34,7 +34,7 @@ const billy = {
   apelido: "Billy",
   status: "Estudante e entusiasta de tecnologia",
   areas: ["Inteligência Artificial", "Engenharia de Software"],
-  linguagens: ["Python", "Lua", "C", "JavaScript"],
+  linguagens em aprendizado: ["Python", "Lua", "C", "JavaScript"],
   focoAtual: "Estudar e desenvolver pequenos softwares com propósito de aprendizado",
   acredito: "Todo avanço tecnológico começa com alguém curioso o suficiente pra testar",
 };
@@ -48,7 +48,7 @@ const billy = {
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ aprendizado
 
 <div align="center">
 
