@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="arte/cabecalho.svg" alt="Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software" width="100%" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/cabecalho.svg?v=2" alt="Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software" width="100%" />
 
-<img src="arte/epigrafe.svg" alt="bem-vindo ao meu perfil" width="80%" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/epigrafe.svg?v=2" alt="bem-vindo ao meu perfil" width="80%" />
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin.svg" alt="LinkedIn" height="42" /></a>
+<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/botao-linkedin.svg?v=2" alt="LinkedIn" height="42" /></a>
 &nbsp;
-<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email.svg" alt="E-mail" height="42" /></a>
+<a href="mailto:isaquednz177@gmail.com"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/botao-email.svg?v=2" alt="E-mail" height="42" /></a>
 
 <br/><br/>
 
@@ -16,11 +16,11 @@
 
 <br/><br/>
 
-<img src="arte/divisor.svg" alt="" width="80%" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/divisor.svg?v=2" alt="" width="80%" />
 
 </div>
 
-<p align="center"><img src="arte/titulo-sobre.svg" alt="Sobre mim" width="100%" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/titulo-sobre.svg?v=2" alt="Sobre mim" width="100%" /></p>
 
 ```ts
 const billy = {
@@ -39,7 +39,7 @@ const billy = {
 > ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
 > ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
-<p align="center"><img src="arte/titulo-estudos.svg" alt="Estudos" width="100%" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/titulo-estudos.svg?v=2" alt="Estudos" width="100%" /></p>
 
 <div align="center">
 
@@ -49,16 +49,16 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-certificados.svg" alt="Certificados" width="100%" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/titulo-certificados.svg?v=2" alt="Certificados" width="100%" /></p>
 
 <div align="center">
 
-<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/certificado-sql.svg" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
-<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/certificado-claude.svg" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/certificado-sql.svg?v=2" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/certificado-claude.svg?v=2" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
 
 </div>
 
-<p align="center"><img src="arte/titulo-contribuicoes.svg" alt="Contribuições" width="100%" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/titulo-contribuicoes.svg?v=2" alt="Contribuições" width="100%" /></p>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
@@ -68,8 +68,8 @@ const billy = {
 
 <div align="center">
 
-<img src="arte/divisor.svg" alt="" width="80%" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/divisor.svg?v=2" alt="" width="80%" />
 
-<img src="arte/rodape.svg" alt="" width="100%" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/main/arte/rodape.svg?v=2" alt="" width="100%" />
 
 </div>
