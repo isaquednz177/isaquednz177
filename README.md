@@ -1,32 +1,28 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:6D28D9,100:8B5CF6&height=200&section=header&text=Isaque%20Diniz&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Estudante%20e%20entusiasta%20%7C%20IA%20e%20Engenharia%20de%20Software&descAlignY=55&descSize=17" width="100%" />
+<img src="arte/cabecalho.svg" alt="Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software" width="100%" />
 
-<a href="https://github.com/isaquednz177">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=23&duration=3000&pause=800&color=8B5CF6&center=true&vCenter=true&width=680&lines=Bem+vindo+ao+meu+perfil!;Sou+o+Isaque%2C+mais+conhecido+como+Billy;Estudante+de+IA+e+Engenharia+de+Software;Entusiasta+do+avanco+tecnologico;Construindo+pequenos+projetos+pra+aprender" alt="Typing SVG" />
-</a>
+<img src="arte/epigrafe.svg" alt="bem-vindo ao meu perfil" width="80%" />
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/">
-  <img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=8B5CF6" />
-</a>
-<a href="mailto:isaquednz177@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-0D1117?style=for-the-badge&logo=gmail&logoColor=8B5CF6" />
-</a>
-<a href="https://github.com/isaquednz177">
-  <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=8B5CF6" />
-</a>
+<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin.svg" alt="LinkedIn" height="42" /></a>
+&nbsp;
+<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email.svg" alt="E-mail" height="42" /></a>
+&nbsp;
+<a href="https://mfg-kohl.vercel.app"><img src="arte/botao-mfg.svg" alt="MFG, meu site" height="42" /></a>
 
-<br/>
+<br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=isaquednz177&label=Visitantes&color=8B5CF6&style=flat-square" />
+<img src="https://komarev.com/ghpvc/?username=isaquednz177&label=almas%20que%20passaram%20por%20aqui&color=8A3F50&style=flat-square" alt="visitantes" />
+
+<br/><br/>
+
+<img src="arte/divisor.svg" alt="" width="80%" />
 
 </div>
 
----
-
-## 🧠 Sobre mim
+<p align="center"><img src="arte/titulo-sobre.svg" alt="Sobre mim" width="100%" /></p>
 
 ```ts
 const billy = {
@@ -34,75 +30,67 @@ const billy = {
   apelido: "Billy",
   status: "Estudante e entusiasta de tecnologia",
   areas: ["Inteligência Artificial", "Engenharia de Software"],
-  linguagens em aprendizado: ["Python", "Lua", "C", "JavaScript"],
+  linguagensEmAprendizado: ["Python", "Lua", "C", "JavaScript"],
   focoAtual: "Estudar e desenvolver pequenos softwares com propósito de aprendizado",
   acredito: "Todo avanço tecnológico começa com alguém curioso o suficiente pra testar",
 };
 ```
 
-- 🎓 Estudando **Inteligência Artificial e Engenharia de Software**
-- 🔭 No momento: construindo **pequenos projetos** pra fixar o que aprendo na prática
-- 🚀 Entusiasta do **avanço tecnológico** em geral — gosto de acompanhar pra onde a coisa tá indo
-- 💬 Fale comigo sobre: **IA, programação, e qualquer tecnologia nova**
-- 📫 Contato: **isaquednz177@gmail.com**
+> ✠ &nbsp;Estudando **Inteligência Artificial e Engenharia de Software**<br/>
+> ✠ &nbsp;No momento: construindo **pequenos projetos** pra fixar o que aprendo na prática<br/>
+> ✠ &nbsp;Projeto principal: **[MFG](https://mfg-kohl.vercel.app)**, uma rede para quem joga, com perfil gótico e integração com a Steam<br/>
+> ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
+> ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
----
-
-## 🛠️ aprendizado
+<p align="center"><img src="arte/titulo-grimorio.svg" alt="Grimório: o que estou aprendendo" width="100%" /></p>
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,lua,c,js&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,lua,c,js&theme=dark" alt="Python, Lua, C, JavaScript" />
 <br/><br/>
-<img src="https://skillicons.dev/icons?i=git,github,vscode,linux&theme=dark" />
+<img src="https://skillicons.dev/icons?i=git,github,vscode,linux&theme=dark" alt="Git, GitHub, VS Code, Linux" />
 
 </div>
 
----
-
-## 📊 GitHub Stats
+<p align="center"><img src="arte/titulo-estatisticas.svg" alt="Estatísticas do GitHub" width="100%" /></p>
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=isaquednz177&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=8B5CF6&icon_color=A855F7&text_color=c9d1d9" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=isaquednz177&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=8B5CF6&text_color=c9d1d9" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=isaquednz177&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B0709&title_color=D9B36C&icon_color=8A3F50&text_color=E8E2D6&ring_color=D9B36C" alt="estatísticas" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=isaquednz177&layout=compact&langs_count=8&hide_border=true&bg_color=0B0709&title_color=D9B36C&text_color=E8E2D6" alt="linguagens mais usadas" />
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=isaquednz177&hide_border=true&background=0D1117&ring=8B5CF6&fire=A855F7&currStreakLabel=8B5CF6&sideLabels=c9d1d9&dates=8b949e&stroke=30363d" />
+<img src="https://streak-stats.demolab.com?user=isaquednz177&hide_border=true&background=0B0709&ring=D9B36C&fire=8A3F50&currStreakNum=E8E2D6&currStreakLabel=D9B36C&sideNums=E8E2D6&sideLabels=D9B36C&dates=8C6A35&stroke=3A1119" alt="dias seguidos de commits" />
 
 </div>
 
----
-
-## 🏆 Troféus
+<p align="center"><img src="arte/titulo-trofeus.svg" alt="Troféus" width="100%" /></p>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=isaquednz177&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" />
+  <img src="https://github-profile-trophy.vercel.app/?username=isaquednz177&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="troféus" />
 </div>
 
----
-
-## 📈 Atividade
+<p align="center"><img src="arte/titulo-atividade.svg" alt="Atividade" width="100%" /></p>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isaquednz177&bg_color=0D1117&color=8B5CF6&line=A855F7&point=FFFFFF&area=true&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isaquednz177&bg_color=0B0709&color=D9B36C&title_color=D9B36C&line=8A3F50&point=E8E2D6&area=true&area_color=8A3F50&hide_border=true" alt="gráfico de atividade" width="100%" />
 </div>
 
----
-
-## 🐍 A cobrinha comendo meus commits
+<p align="center"><img src="arte/titulo-serpente.svg" alt="A serpente comendo meus commits" width="100%" /></p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-gotica.svg" alt="a serpente comendo os commits" />
 </div>
 
----
+<br/>
 
 <div align="center">
 
-### ⭐ Se curtiu alguma coisa por aqui, deixa uma star!
+<img src="arte/divisor.svg" alt="" width="80%" />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,50:6D28D9,100:000000&height=120&section=footer" width="100%" />
+**Se curtiu alguma coisa por aqui, deixa uma ⭐**
+
+<img src="arte/rodape.svg" alt="que a curiosidade te guie pela escuridão" width="100%" />
 
 </div>

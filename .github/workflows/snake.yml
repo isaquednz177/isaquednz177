@@ -28,6 +28,7 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
             dist/snake.gif?color_snake=#8B5CF6&color_dots=#161B22,#4B2E83,#6D3FA8,#8B5CF6,#EC4899
+            dist/snake-gotica.svg?color_snake=#D9B36C&color_dots=#1A0F13,#3A1119,#5E2433,#8A3F50,#D9B36C
 
       - name: Publicar na branch "output"
         uses: crazy-max/ghaction-github-pages@v4
