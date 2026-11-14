@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="arte/cabecalho-v3.svg" alt="Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software" width="100%" />
+<img src="arte/cabecalho-v4.svg" alt="Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software" width="100%" />
 
-<img src="arte/epigrafe-v3.svg" alt="bem-vindo ao meu perfil" width="80%" />
+<img src="arte/epigrafe-v4.svg" alt="bem-vindo ao meu perfil" width="80%" />
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin-v3.svg" alt="LinkedIn" height="42" /></a>
+<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin-v4.svg" alt="LinkedIn" height="42" /></a>
 &nbsp;
-<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email-v3.svg" alt="E-mail" height="42" /></a>
+<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email-v4.svg" alt="E-mail" height="42" /></a>
 
 <br/><br/>
 
@@ -16,11 +16,11 @@
 
 <br/><br/>
 
-<img src="arte/divisor-v3.svg" alt="" width="80%" />
+<img src="arte/divisor-v4.svg" alt="" width="80%" />
 
 </div>
 
-<p align="center"><img src="arte/titulo-sobre-v3.svg" alt="Sobre mim" width="100%" /></p>
+<p align="center"><img src="arte/titulo-sobre-v4.svg" alt="Sobre mim" width="100%" /></p>
 
 ```ts
 const billy = {
@@ -39,7 +39,7 @@ const billy = {
 > ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
 > ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
-<p align="center"><img src="arte/titulo-estudos-v3.svg" alt="Estudos" width="100%" /></p>
+<p align="center"><img src="arte/titulo-estudos-v4.svg" alt="Estudos" width="100%" /></p>
 
 <div align="center">
 
@@ -49,16 +49,16 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-certificados-v3.svg" alt="Certificados" width="100%" /></p>
+<p align="center"><img src="arte/titulo-certificados-v4.svg" alt="Certificados" width="100%" /></p>
 
 <div align="center">
 
-<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/certificado-sql-v3.svg" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
-<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/certificado-claude-v3.svg" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/certificado-sql-v4.svg" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/certificado-claude-v4.svg" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
 
 </div>
 
-<p align="center"><img src="arte/titulo-contribuicoes-v3.svg" alt="Contribuições" width="100%" /></p>
+<p align="center"><img src="arte/titulo-contribuicoes-v4.svg" alt="Contribuições" width="100%" /></p>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
@@ -68,8 +68,8 @@ const billy = {
 
 <div align="center">
 
-<img src="arte/divisor-v3.svg" alt="" width="80%" />
+<img src="arte/divisor-v4.svg" alt="" width="80%" />
 
-<img src="arte/rodape-v3.svg" alt="" width="100%" />
+<img src="arte/rodape-v4.svg" alt="" width="100%" />
 
 </div>

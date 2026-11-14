@@ -5,6 +5,7 @@ Uso:  pip install fonttools brotli
 
 A faixa de estatísticas é outra: arte/estatisticas.py, rodada pela automação do GitHub.
 """
+import base64
 import math
 import os
 
@@ -15,8 +16,8 @@ from base import (GOTICA, MARROM_LINHA, OSSO, PASTA, PRETO_2, SANGUE, SANGUE_CLA
 
 # O servidor de imagens do GitHub guarda cada arquivo pelo NOME (ignora ?v=) por um tempo.
 # Mudou alguma arte? Suba a VERSAO: os arquivos ganham nome novo e o README precisa
-# apontar para eles (troque "-v3.svg" pelo número novo no README.md).
-VERSAO = 3
+# apontar para eles (troque "-v4.svg" pelo número novo no README.md).
+VERSAO = 4
 
 
 def saida(nome):
@@ -25,34 +26,37 @@ def saida(nome):
 
 # ---------------------------------------------------------------- cabeçalho
 def cabecalho():
-    w, h = 1200, 380
+    """A pintura da catedral (arte/capa.jpg) no alto; a névoa desce e o nome fica sobre ela."""
+    w, h = 1200, 510
+    ih = 400  # altura da pintura (1800 x 600 reduzida para 1200 x 400)
+    with open(os.path.join(PASTA, "capa.jpg"), "rb") as f:
+        capa = base64.b64encode(f.read()).decode()
     tv_defs, tv = textura(w, h)
-    css_brasas, pontos = brasas(w, h, 24, 3)
-    nome = GOTICA.caminho("Isaque Diniz", 104, w / 2, 178)
-    apelido = SERIFA.caminho("Billy camomilla", 25, w / 2, 218, espaco=1.5)
-    linha = SERIFA.caminho("ESTUDANTE  ·  INTELIGÊNCIA ARTIFICIAL  ·  ENGENHARIA DE SOFTWARE", 15, w / 2, 250, espaco=3)
+    css_brasas, pontos = brasas(w, h, 18, 3)
+    nome = GOTICA.caminho("Isaque Diniz", 96, w / 2, 414)
+    apelido = SERIFA.caminho("Billy camomilla", 24, w / 2, 452, espaco=1.5)
+    linha = SERIFA.caminho("ESTUDANTE  ·  INTELIGÊNCIA ARTIFICIAL  ·  ENGENHARIA DE SOFTWARE", 14, w / 2, 482, espaco=3)
     cantos = "".join(f'<path d="{quadrifolio(x, y, 9)}" fill="{SANGUE_VIVO}"/>' for x, y in ((w - 12, 12), (12, h - 12)))
     svg = f"""
 {abrir(w, h, "Isaque Diniz, Billy camomilla: estudante de inteligência artificial e engenharia de software")}
 <defs>{defs_comuns()}{tv_defs}
-<linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A0605"/><stop offset=".55" stop-color="#170D09"/><stop offset="1" stop-color="#2A110C"/></linearGradient>
-<radialGradient id="brilho" cx=".5" cy=".46" r=".5"><stop offset="0" stop-color="{SANGUE}" stop-opacity=".42"/><stop offset=".6" stop-color="{SANGUE_ESC}" stop-opacity=".15"/><stop offset="1" stop-color="{SANGUE_ESC}" stop-opacity="0"/></radialGradient>
-<filter id="sombra" x="-10%" y="-30%" width="120%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".95"/><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="{SANGUE}" flood-opacity=".6"/></filter>
+<linearGradient id="nevoa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1B1D" stop-opacity="0"/><stop offset=".38" stop-color="#1A1B1D"/><stop offset="1" stop-color="#100C0B"/></linearGradient>
+<radialGradient id="vinheta" cx=".5" cy=".42" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient>
+<radialGradient id="brilho" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="{SANGUE}" stop-opacity=".28"/><stop offset="1" stop-color="{SANGUE}" stop-opacity="0"/></radialGradient>
+<filter id="sombra" x="-10%" y="-30%" width="120%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".95"/><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="{SANGUE}" flood-opacity=".55"/></filter>
 <clipPath id="corte"><path d="{chanfro(0, 0, w, h, 26)}"/></clipPath></defs>
 {css_brasas}
 <g clip-path="url(#corte)">
-<rect width="{w}" height="{h}" fill="url(#ceu)"/>
-<ellipse cx="{w/2}" cy="175" rx="470" ry="170" fill="url(#brilho)"/>
-{rosacea(w/2, 175, 158, SANGUE, largura=1.3, opacidade=.32, petalas=16)}
-{morcego(205, 72, .8)}{morcego(250, 108, .5)}{morcego(960, 84, .7)}{morcego(1000, 54, .45)}
-<g opacity=".7">{casario(w, h - 10, 11, .62, "#120906", janelas=False)}</g>
-{casario(w, h, 4, .55)}
-{torre(50, 68, 190, h, 5)}{torre(w - 50 - 68, 68, 190, h, 6)}
+<rect width="{w}" height="{h}" fill="#100C0B"/>
+<image href="data:image/jpeg;base64,{capa}" x="0" y="0" width="{w}" height="{ih}" preserveAspectRatio="xMidYMid slice"/>
+<rect y="{ih - 140}" width="{w}" height="{h - ih + 140}" fill="url(#nevoa)"/>
+<ellipse cx="{w/2}" cy="{h - 70}" rx="430" ry="90" fill="url(#brilho)"/>
+<rect width="{w}" height="{h}" fill="url(#vinheta)"/>
 {pontos}
 <path d="{nome}" fill="url(#sangue)" filter="url(#sombra)"/>
 <path d="{apelido}" fill="{OSSO}"/>
-{floreio(w/2 - 120, 210, 150, -1)}{floreio(w/2 + 120, 210, 150, 1)}
-<path d="{linha}" fill="{OSSO}" opacity=".75"/>
+{floreio(w/2 - 112, 444, 150, -1)}{floreio(w/2 + 112, 444, 150, 1)}
+<path d="{linha}" fill="{OSSO}" opacity=".7"/>
 {tv}
 <path d="{chanfro(12, 12, w-24, h-24, 18)}" fill="none" stroke="{MARROM_LINHA}" stroke-width="1.5"/>
 <path d="{chanfro(18, 18, w-36, h-36, 14)}" fill="none" stroke="{SANGUE}" stroke-opacity=".55"/>
