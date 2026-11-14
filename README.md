@@ -71,18 +71,6 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-trofeus.svg" alt="Troféus" width="100%" /></p>
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=isaquednz177&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="troféus" />
-</div>
-
-<p align="center"><img src="arte/titulo-atividade.svg" alt="Atividade" width="100%" /></p>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=isaquednz177&bg_color=0B0709&color=D9B36C&title_color=D9B36C&line=8A3F50&point=E8E2D6&area=true&area_color=8A3F50&hide_border=true" alt="gráfico de atividade" width="100%" />
-</div>
-
 <p align="center"><img src="arte/titulo-serpente.svg" alt="A serpente comendo meus commits" width="100%" /></p>
 
 <div align="center">
