@@ -1,5 +1,5 @@
-# Gera a cobrinha comendo os commits e a faixa de estatísticas do README,
-# e publica as duas na branch "output".
+# Gera a cobrinha comendo os commits, a faixa e o painel de estatísticas do README,
+# e publica tudo na branch "output".
 
 name: Cobrinha e estatísticas
 
@@ -29,7 +29,7 @@ jobs:
       - name: Gerar a faixa de estatísticas
         run: |
           pip install fonttools brotli
-          python arte/estatisticas.py dist/estatisticas-v2.svg
+          python arte/estatisticas.py dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

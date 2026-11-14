@@ -6,11 +6,11 @@
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin-v1.png" alt="LinkedIn" height="54" /></a>
+<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/pecas/botao-linkedin-v1.png" alt="LinkedIn" height="120" /></a>
 &nbsp;
-<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email-v1.png" alt="E-mail" height="54" /></a>
+<a href="mailto:isaquednz177@gmail.com"><img src="arte/pecas/botao-email-v1.png" alt="E-mail" height="120" /></a>
 &nbsp;
-<a href="https://www.instagram.com/antigo_balyoz/"><img src="arte/botao-instagram-v1.png" alt="Instagram" height="54" /></a>
+<a href="https://www.instagram.com/antigo_balyoz/"><img src="arte/pecas/botao-instagram-v1.png" alt="Instagram" height="120" /></a>
 
 <br/><br/>
 
@@ -22,7 +22,7 @@
 
 </div>
 
-<p align="center"><img src="arte/titulo-sobre-v4.svg" alt="Sobre mim" width="100%" /></p>
+<p align="center"><img src="arte/pecas/titulo-sobre-v1.png" alt="Sobre mim" width="100%" /></p>
 
 ```ts
 const billy = {
@@ -41,7 +41,7 @@ const billy = {
 > ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
 > ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
-<p align="center"><img src="arte/titulo-estudos-v4.svg" alt="Estudos" width="100%" /></p>
+<p align="center"><img src="arte/pecas/titulo-estudos-v1.png" alt="Estudos" width="100%" /></p>
 
 <div align="center">
 
@@ -51,19 +51,25 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-certificados-v4.svg" alt="Certificados" width="100%" /></p>
+<p align="center"><img src="arte/pecas/titulo-certificados-v1.png" alt="Certificados" width="100%" /></p>
 
 <div align="center">
 
-<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/certificado-sql-v4.svg" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
-<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/certificado-claude-v4.svg" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/pecas/certificado-sql-v1.png" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/pecas/certificado-claude-v1.png" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
 
 </div>
 
-<p align="center"><img src="arte/titulo-contribuicoes-v4.svg" alt="Contribuições" width="100%" /></p>
+<p align="center"><img src="arte/pecas/titulo-contribuicoes-v1.png" alt="Contribuições" width="100%" /></p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
+
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/painel-estatisticas-v1.svg" alt="Estatísticas do GitHub" width="78%" />
+
+<br/><br/>
+
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
+
 </div>
 
 <br/>
@@ -72,6 +78,6 @@ const billy = {
 
 <img src="arte/divisor-v4.svg" alt="" width="80%" />
 
-<img src="arte/rodape-v4.svg" alt="" width="100%" />
+<img src="arte/pecas/rodape-v1.png" alt="" width="100%" />
 
 </div>

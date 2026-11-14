@@ -32,7 +32,8 @@ VITRAL = "#C41E2A"
 
 
 class Fonte:
-    def __init__(self, arquivo, peso=None):
+    def __init__(self, arquivo, peso=None, algarismos=None):
+        """algarismos="lf": números alinhados (todos da mesma altura) em vez dos antigos."""
         f = TTFont(os.path.join(FONTES, arquivo))
         if peso and "fvar" in f:
             f = instantiateVariableFont(f, {"wght": peso})
@@ -40,6 +41,11 @@ class Fonte:
         self.cmap = f.getBestCmap()
         self.glifos = f.getGlyphSet()
         self.avanco = f["hmtx"].metrics
+        if algarismos:
+            for c in "0123456789":
+                alt = f"{self.cmap[ord(c)]}.{algarismos}"
+                if alt in self.avanco:
+                    self.cmap[ord(c)] = alt
 
     def largura(self, texto, tam, espaco=0):
         s = tam / self.upm
@@ -63,6 +69,7 @@ class Fonte:
 GOTICA = Fonte("unifrakturcook-latin.woff2")
 SERIFA = Fonte("cormorant-garamond-latin.woff2", peso=600)
 SERIFA_FORTE = Fonte("cormorant-garamond-latin.woff2", peso=700)
+NUMEROS = Fonte("cormorant-garamond-latin.woff2", peso=600, algarismos="lf")
 
 
 def salvar(caminho, svg):

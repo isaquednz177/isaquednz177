@@ -3,8 +3,12 @@
 Roda na automação (.github/workflows/snake.yml), com o GITHUB_TOKEN que o próprio
 GitHub dá a cada execução (só lê dados públicos do perfil).
 
-Uso:  python arte/estatisticas.py dist/estatisticas-v2.svg
-      python arte/estatisticas.py previa.svg --exemplo     (números de mentira, para ver o desenho)
+Gera dois arquivos na pasta indicada:
+  estatisticas-v2.svg       faixa pequena embaixo dos botões
+  painel-estatisticas-v1.svg  painel "Estatísticas" (moldura da folha de artes, arte/pecas/)
+
+Uso:  python arte/estatisticas.py dist
+      python arte/estatisticas.py previa --exemplo     (números de mentira, para ver o desenho)
 """
 import base64
 import json
@@ -13,7 +17,7 @@ import sys
 import urllib.request
 from datetime import date
 
-from base import OSSO, PASTA, SERIFA, SERIFA_FORTE, abrir, quadrifolio, salvar
+from base import NUMEROS, OSSO, PASTA, SERIFA, SERIFA_FORTE, abrir, quadrifolio, salvar
 
 # moldura da faixa: arte do Isaque, com os números de exemplo apagados (só a placa e as duas ogivas)
 MOLDURA = "faixa-estatisticas.webp"
@@ -126,8 +130,36 @@ def desenhar(n):
 </svg>"""
 
 
+# painel: a moldura (arte/pecas/painel-estatisticas.webp) já traz os ícones e os nomes;
+# aqui entram só os números, no lugar dos de exemplo da arte
+PAINEL = os.path.join("pecas", "painel-estatisticas.webp")
+PW, PH = 644, 260
+# (chave, esquerda, linha de base, largura máxima até a divisória)
+LUGARES = [("contribuicoes", 176, 109.5, 140), ("sequencia", 460, 108.5, 130),
+           ("repositorios", 131, 201, 105), ("estrelas", 338, 201, 85), ("seguidores", 522, 201, 90)]
+
+
+def painel(n):
+    partes = []
+    for chave, x, base, maximo in LUGARES:
+        v = milhar(n[chave])
+        tam = min(45.0, 45.0 * maximo / NUMEROS.largura(v, 45))
+        lsb = NUMEROS.glifos[NUMEROS.cmap[ord(v[0])]].lsb  # a tinta do 1º algarismo começa em x
+        partes.append(f'<path d="{NUMEROS.caminho(v, tam, x - lsb * tam / NUMEROS.upm, base, ancora="inicio")}" fill="#E9BE90"/>')
+    with open(os.path.join(PASTA, PAINEL), "rb") as f:
+        moldura = base64.b64encode(f.read()).decode()
+    rotulo = "Estatísticas: " + " · ".join(f"{v} {r}" for v, r in itens(n))
+    return f"""
+{abrir(PW, PH, rotulo)}
+<defs><filter id="sombra" x="-10%" y="-20%" width="120%" height="150%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity=".9"/></filter></defs>
+<image href="data:image/webp;base64,{moldura}" width="{PW}" height="{PH}"/>
+<g filter="url(#sombra)">{"".join(partes)}</g>
+</svg>"""
+
+
 if __name__ == "__main__":
-    destino = sys.argv[1]
+    pasta = sys.argv[1]
+    os.makedirs(pasta, exist_ok=True)
     if "--exemplo" in sys.argv:
         n = {"contribuicoes": 1234, "sequencia": 6, "repositorios": 8, "estrelas": 3, "seguidores": 1}
     else:
@@ -137,4 +169,5 @@ if __name__ == "__main__":
         login = os.environ.get("GITHUB_REPOSITORY_OWNER", "isaquednz177")
         n = numeros(buscar(login, token))
     print(n)
-    salvar(destino, desenhar(n))
+    salvar(os.path.join(pasta, "estatisticas-v2.svg"), desenhar(n))
+    salvar(os.path.join(pasta, "painel-estatisticas-v1.svg"), painel(n))
