@@ -1,19 +1,25 @@
-"""Faixa pequena com as estatísticas do GitHub, no mesmo estilo das outras artes.
+"""Faixa com as estatísticas do GitHub, escritas sobre a moldura gótica (arte/faixa-estatisticas.webp).
 
 Roda na automação (.github/workflows/snake.yml), com o GITHUB_TOKEN que o próprio
 GitHub dá a cada execução (só lê dados públicos do perfil).
 
-Uso:  python arte/estatisticas.py dist/estatisticas.svg
+Uso:  python arte/estatisticas.py dist/estatisticas-v2.svg
       python arte/estatisticas.py previa.svg --exemplo     (números de mentira, para ver o desenho)
 """
+import base64
 import json
 import os
 import sys
 import urllib.request
 from datetime import date
 
-from base import (MARROM_LINHA, OSSO, SANGUE, SANGUE_CLARO, SANGUE_VIVO, SERIFA, SERIFA_FORTE,
-                  abrir, chanfro, defs_comuns, f1, quadrifolio, salvar, textura)
+from base import OSSO, PASTA, SERIFA, SERIFA_FORTE, abrir, quadrifolio, salvar
+
+# moldura da faixa: arte do Isaque, com os números de exemplo apagados (só a placa e as duas ogivas)
+MOLDURA = "faixa-estatisticas.webp"
+W, H = 2118, 271          # tamanho da arte original; a imagem embutida é menor e escala junto
+AREA = (198, 1928)        # entre as duas ogivas
+LINHA, CENTRO = 149, 134  # linha de base do texto e altura dos quadrifólios
 
 CONSULTA = """
 query($login: String!) {
@@ -90,29 +96,33 @@ def itens(n):
 
 def desenhar(n):
     lista = itens(n)
-    tn, tl, vao, sep = 18, 13, 7, 34
-    larguras = [SERIFA_FORTE.largura(v, tn) + vao + SERIFA.largura(r, tl, .6) for v, r in lista]
-    w = int(sum(larguras) + sep * (len(lista) - 1) + 56)
-    h = 40
-    tv_defs, tv = textura(w, h, "te")
+    tn, tl, vao, sep = 73.0, 41.5, 20.0, 93.0
+    def larguras(k):
+        return [SERIFA_FORTE.largura(v, tn * k) + vao * k + SERIFA.largura(r, tl * k) for v, r in lista]
+    total = sum(larguras(1)) + sep * (len(lista) - 1)
+    k = min(1.0, (AREA[1] - AREA[0]) / total)  # número grande demais: encolhe tudo junto
+    lg = larguras(k)
+    x = (AREA[0] + AREA[1]) / 2 - (sum(lg) + sep * k * (len(lista) - 1)) / 2
     partes = []
-    x = 28
-    for i, ((v, r), lg) in enumerate(zip(lista, larguras)):
-        partes.append(f'<path d="{SERIFA_FORTE.caminho(v, tn, x, 26, ancora="inicio")}" fill="{SANGUE_CLARO}"/>')
-        xr = x + SERIFA_FORTE.largura(v, tn) + vao
-        partes.append(f'<path d="{SERIFA.caminho(r, tl, xr, 25.5, ancora="inicio", espaco=.6)}" fill="{OSSO}" opacity=".8"/>')
-        x += lg
+    for i, ((v, r), l) in enumerate(zip(lista, lg)):
+        partes.append(f'<path d="{SERIFA_FORTE.caminho(v, tn * k, x, LINHA, ancora="inicio")}" fill="url(#num)"/>')
+        xr = x + SERIFA_FORTE.largura(v, tn * k) + vao * k
+        partes.append(f'<path d="{SERIFA.caminho(r, tl * k, xr, LINHA, ancora="inicio")}" fill="{OSSO}"/>')
+        x += l
         if i < len(lista) - 1:
-            partes.append(f'<path d="{quadrifolio(x + sep/2, h/2, 6)}" fill="{SANGUE}"/>')
-            x += sep
+            partes.append(f'<path d="{quadrifolio(x + sep * k / 2, CENTRO, 16 * k)}" fill="url(#num)"/>')
+            x += sep * k
+    with open(os.path.join(PASTA, MOLDURA), "rb") as f:
+        moldura = base64.b64encode(f.read()).decode()
     rotulo = " · ".join(f"{v} {r}" for v, r in lista)
     return f"""
-{abrir(w, h, rotulo)}
-<defs>{defs_comuns()}{tv_defs}<clipPath id="c"><path d="{chanfro(1, 1, w-2, h-2, 9)}"/></clipPath></defs>
-<g clip-path="url(#c)"><rect width="{w}" height="{h}" fill="url(#placa)"/>{tv}</g>
-<path d="{chanfro(1, 1, w-2, h-2, 9)}" fill="none" stroke="{MARROM_LINHA}"/>
-<path d="M10,1 H{f1(w*.3)}" stroke="{SANGUE_VIVO}" stroke-width="2"/>
-{"".join(partes)}
+{abrir(W, H, rotulo)}
+<defs>
+<linearGradient id="num" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0525B"/><stop offset=".55" stop-color="#C8141F"/><stop offset="1" stop-color="#8E0A13"/></linearGradient>
+<filter id="sombra" x="-5%" y="-30%" width="110%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".85"/></filter>
+</defs>
+<image href="data:image/webp;base64,{moldura}" width="{W}" height="{H}"/>
+<g filter="url(#sombra)">{"".join(partes)}</g>
 </svg>"""
 
 

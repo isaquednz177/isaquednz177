@@ -127,20 +127,7 @@ def divisor():
     salvar(saida("divisor.svg"), svg)
 
 
-# ---------------------------------------------------------------- botões dos links
-def botao(arquivo, texto, rotulo):
-    tam = 17
-    larg = SERIFA.largura(texto, tam, 3)
-    w, h = int(larg + 68), 42
-    svg = f"""
-{abrir(w, h, rotulo)}
-<defs><linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A0A0E"/><stop offset="1" stop-color="#1A0907"/></linearGradient></defs>
-<path d="{chanfro(1, 1, w-2, h-2, 8)}" fill="url(#p)" stroke="{SANGUE_VIVO}" stroke-opacity=".75"/>
-<path d="M9,1 H{f1(w*.45)}" stroke="{SANGUE_CLARO}" stroke-width="2"/>
-<path d="{quadrifolio(17, h/2, 7)}" fill="{SANGUE_CLARO}"/><path d="{quadrifolio(w-17, h/2, 7)}" fill="{SANGUE_CLARO}"/>
-<path d="{SERIFA.caminho(texto, tam, w/2, 27, espaco=3)}" fill="{OSSO}"/>
-</svg>"""
-    salvar(saida(arquivo), svg)
+# botões dos links (LinkedIn, E-mail, Instagram): artes prontas do Isaque em arte/botao-*-v1.png
 
 
 # ---------------------------------------------------------------- certificados
@@ -229,8 +216,6 @@ if __name__ == "__main__":
     titulo("titulo-estudos.svg", "Estudos", "Estudos")
     titulo("titulo-certificados.svg", "Certificados", "Certificados")
     titulo("titulo-contribuicoes.svg", "Contribuições", "Contribuições")
-    botao("botao-linkedin.svg", "LINKEDIN", "LinkedIn")
-    botao("botao-email.svg", "E-MAIL", "E-mail")
     certificado("certificado-sql.svg", "banco de dados", "Banco de Dados SQL do Zero ao Avançado + Projetos Reais",
                 "Udemy · Andre Iacono", "8 horas", "novembro de 2026",
                 "Certificado: Banco de Dados SQL do Zero ao Avançado, Udemy")

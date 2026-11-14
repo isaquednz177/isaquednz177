@@ -29,7 +29,7 @@ jobs:
       - name: Gerar a faixa de estatísticas
         run: |
           pip install fonttools brotli
-          python arte/estatisticas.py dist/estatisticas.svg
+          python arte/estatisticas.py dist/estatisticas-v2.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -6,13 +6,15 @@
 
 <br/><br/>
 
-<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin-v4.svg" alt="LinkedIn" height="42" /></a>
+<a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin-v1.png" alt="LinkedIn" height="54" /></a>
 &nbsp;
-<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email-v4.svg" alt="E-mail" height="42" /></a>
+<a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email-v1.png" alt="E-mail" height="54" /></a>
+&nbsp;
+<a href="https://www.instagram.com/antigo_balyoz/"><img src="arte/botao-instagram-v1.png" alt="Instagram" height="54" /></a>
 
 <br/><br/>
 
-<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/estatisticas.svg" alt="estatísticas do GitHub" height="34" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/estatisticas-v2.svg" alt="estatísticas do GitHub" width="80%" />
 
 <br/><br/>
 
