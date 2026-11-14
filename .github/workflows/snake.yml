@@ -1,4 +1,4 @@
-# Gera a cobrinha comendo os commits, a faixa e o painel de estatísticas do README,
+# Gera a cobrinha comendo os commits (na moldura do dragão), a faixa e o painel de estatísticas do README,
 # e publica tudo na branch "output".
 
 name: Cobrinha e estatísticas
@@ -38,7 +38,13 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-sangue.svg?color_snake=#B3121E&color_dots=#160D09,#3B1F14,#5C1A14,#8B0A14,#C41E2A
+            dist/snake-sangue.svg?color_snake=#E8333A&color_dots=#300C0E,#5A1216,#8B0A14,#B3121E,#D8242A
+
+      # a ação da cobrinha deixa a pasta dist só para o root: devolve para o usuário do runner
+      - name: Pôr a cobrinha na moldura do dragão
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" dist
+          python arte/cobra.py dist/snake-sangue.svg dist/cobra-v1.svg
 
       - name: Publicar na branch "output"
         uses: crazy-max/ghaction-github-pages@v4

@@ -68,7 +68,7 @@ const billy = {
 
 <br/><br/>
 
-<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/cobra-v1.svg" alt="contribuições do último ano, com a cobrinha comendo os commits" width="100%" />
 
 </div>
 
