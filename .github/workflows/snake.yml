@@ -1,7 +1,7 @@
-# Salve este arquivo em: .github/workflows/snake.yml
-# Ele gera a animação da cobrinha comendo seus commits.
+# Gera a cobrinha comendo os commits e a faixa de estatísticas do README,
+# e publica as duas na branch "output".
 
-name: Generate Snake Animation
+name: Cobrinha e estatísticas
 
 on:
   schedule:
@@ -19,16 +19,26 @@ jobs:
       contents: write
 
     steps:
-      - name: Gerar SVGs da cobrinha
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # antes da cobrinha: a ação dela roda em Docker e deixa a pasta dist só para o root
+      - name: Gerar a faixa de estatísticas
+        run: |
+          pip install fonttools brotli
+          python arte/estatisticas.py dist/estatisticas.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Gerar a cobrinha
         uses: Platane/snk@v3
-        id: snake-gif
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
-            dist/snake.gif?color_snake=#8B5CF6&color_dots=#161B22,#4B2E83,#6D3FA8,#8B5CF6,#EC4899
-            dist/snake-gotica.svg?color_snake=#D9B36C&color_dots=#1A0F13,#3A1119,#5E2433,#8A3F50,#D9B36C
+            dist/snake-sangue.svg?color_snake=#B3121E&color_dots=#160D09,#3B1F14,#5C1A14,#8B0A14,#C41E2A
 
       - name: Publicar na branch "output"
         uses: crazy-max/ghaction-github-pages@v4

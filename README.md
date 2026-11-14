@@ -12,7 +12,7 @@
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=isaquednz177&label=almas%20que%20passaram%20por%20aqui&color=8A3F50&style=flat-square" alt="visitantes" />
+<img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/estatisticas.svg" alt="estatísticas do GitHub" height="34" />
 
 <br/><br/>
 
@@ -39,7 +39,7 @@ const billy = {
 > ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
 > ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
-<p align="center"><img src="arte/titulo-grimorio.svg" alt="Grimório: o que estou aprendendo" width="100%" /></p>
+<p align="center"><img src="arte/titulo-estudos.svg" alt="Estudos" width="100%" /></p>
 
 <div align="center">
 
@@ -58,10 +58,10 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-serpente.svg" alt="A serpente comendo meus commits" width="100%" /></p>
+<p align="center"><img src="arte/titulo-contribuicoes.svg" alt="Contribuições" width="100%" /></p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-gotica.svg" alt="a serpente comendo os commits" />
+  <img src="https://raw.githubusercontent.com/isaquednz177/isaquednz177/output/snake-sangue.svg" alt="contribuições do último ano" />
 </div>
 
 <br/>
@@ -70,8 +70,6 @@ const billy = {
 
 <img src="arte/divisor.svg" alt="" width="80%" />
 
-**Se curtiu alguma coisa por aqui, deixa uma ⭐**
-
-<img src="arte/rodape.svg" alt="que a curiosidade te guie pela escuridão" width="100%" />
+<img src="arte/rodape.svg" alt="" width="100%" />
 
 </div>
