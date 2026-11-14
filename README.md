@@ -49,6 +49,15 @@ const billy = {
 
 </div>
 
+<p align="center"><img src="arte/titulo-certificados.svg" alt="Certificados" width="100%" /></p>
+
+<div align="center">
+
+<a href="https://ude.my/UC-1da4e922-debc-4ffa-ae11-ed3d24a02624"><img src="arte/certificado-sql.svg" alt="Certificado: Banco de Dados SQL do Zero ao Avançado + Projetos Reais (Udemy). Clique para verificar." width="49%" /></a>
+<a href="https://ude.my/UC-11a04b75-2763-421c-a9ab-cf651f3147fb"><img src="arte/certificado-claude.svg" alt="Certificado: Mastering Claude Cowork, Claude Design &amp; AI Agents (Udemy). Clique para verificar." width="49%" /></a>
+
+</div>
+
 <p align="center"><img src="arte/titulo-estatisticas.svg" alt="Estatísticas do GitHub" width="100%" /></p>
 
 <div align="center">

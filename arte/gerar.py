@@ -7,6 +7,7 @@ O GitHub não deixa usar fonte própria no README, então o texto vira desenho
 (caminho SVG) aqui mesmo: o resultado não depende de nenhuma fonte instalada.
 """
 import math
+from html import escape
 import os
 import random
 import sys
@@ -331,6 +332,63 @@ def rodape():
     salvar("rodape.svg", svg)
 
 
+# ---------------------------------------------------------------- certificados
+def quebrar(fonte, texto, tam, largura):
+    linhas, atual = [], ""
+    for palavra in texto.split():
+        teste = (atual + " " + palavra).strip()
+        if atual and fonte.largura(teste, tam) > largura:
+            linhas.append(atual)
+            atual = palavra
+        else:
+            atual = teste
+    return linhas + [atual]
+
+
+def selo(cx, cy):
+    """Selo de lacre vinho com borda irregular e uma lua crescente dourada."""
+    pts = []
+    for i in range(36):
+        a = i / 36 * 2 * math.pi
+        r = 27 + (2.2 if i % 2 else 0)
+        pts.append(f"{cx + r * math.cos(a):.1f},{cy + r * math.sin(a):.1f}")
+    return (
+        f'<polygon points="{" ".join(pts)}" fill="#5E1A28"/>'
+        f'<circle cx="{cx}" cy="{cy}" r="21" fill="#7A2434" stroke="{OURO}" stroke-opacity=".6"/>'
+        f'<circle cx="{cx}" cy="{cy}" r="16" fill="none" stroke="#4A1420" stroke-dasharray="2 2.5"/>'
+        f'<circle cx="{cx}" cy="{cy}" r="8.5" fill="{OURO}"/><circle cx="{cx + 4}" cy="{cy - 3}" r="8" fill="#7A2434"/>'
+    )
+
+
+def certificado(arquivo, categoria, texto, escola, horas, data, rotulo):
+    w, h = 460, 250
+    tv_defs, tv = textura(w, h, "tvc")
+    linhas = quebrar(SERIFA, texto, 25, 330)[:3]
+    titulo_d = " ".join(SERIFA.caminho(l, 25, 30, 82 + i * 29, ancora="inicio") for i, l in enumerate(linhas))
+    y_escola = 82 + len(linhas) * 29 + 8
+    seta = f'<path d="M{w-40},{h-33} l9,-9 M{w-38},{h-42} h7 v7" stroke="{OURO}" stroke-width="1.4" fill="none"/>'
+    svg = f"""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{escape(rotulo)}">
+<defs>{defs_linhas()}{tv_defs}
+<linearGradient id="placa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A0D12"/><stop offset="1" stop-color="{FUNDO}"/></linearGradient>
+<radialGradient id="luz" cx=".85" cy=".1" r=".6"><stop offset="0" stop-color="{VINHO}" stop-opacity=".3"/><stop offset="1" stop-color="{VINHO}" stop-opacity="0"/></radialGradient>
+<clipPath id="c"><path d="{chanfro(1, 1, w - 2, h - 2, 16)}"/></clipPath></defs>
+<g clip-path="url(#c)"><rect width="{w}" height="{h}" fill="url(#placa)"/><rect width="{w}" height="{h}" fill="url(#luz)"/>{tv}</g>
+<path d="{chanfro(1, 1, w - 2, h - 2, 16)}" fill="none" stroke="{OURO}" stroke-opacity=".55" stroke-width="1.2"/>
+<path d="{chanfro(8, 8, w - 16, h - 16, 11)}" fill="none" stroke="{OURO_ESC}" stroke-opacity=".35"/>
+<path d="M16,1 H{w*.4}" stroke="{OURO}" stroke-width="2"/>
+<path d="{SERIFA.caminho(categoria.upper(), 12, 30, 44, ancora="inicio", espaco=2.6)}" fill="{OURO}" opacity=".8"/>
+{selo(w - 52, 52)}
+<path d="{titulo_d}" fill="{MARFIM}"/>
+<path d="{SERIFA.caminho(escola, 16, 30, y_escola, ancora="inicio", espaco=.4)}" fill="{OURO}"/>
+<rect x="30" y="{h-56}" width="{w-60}" height="1" fill="url(#linhaD)" opacity=".5"/>
+<path d="{SERIFA.caminho(f"{horas}  ·  {data}", 15, 30, h-30, ancora="inicio", espaco=1)}" fill="{MARFIM}" opacity=".7"/>
+<path d="{SERIFA.caminho("VERIFICAR", 12, w - 54 - SERIFA.largura("VERIFICAR", 12, 2.4), h-30, ancora="inicio", espaco=2.4)}" fill="{OURO}"/>
+{seta}
+</svg>"""
+    salvar(arquivo, svg)
+
+
 cabecalho()
 epigrafe()
 divisor()
@@ -343,3 +401,8 @@ titulo("titulo-atividade.svg", "Atividade", "Atividade")
 titulo("titulo-serpente.svg", "A serpente dos commits", "A serpente comendo meus commits")
 botao("botao-linkedin.svg", "LINKEDIN", "LinkedIn")
 botao("botao-email.svg", "E-MAIL", "E-mail")
+titulo("titulo-certificados.svg", "Certificados", "Certificados")
+certificado("certificado-sql.svg", "banco de dados", "Banco de Dados SQL do Zero ao Avançado + Projetos Reais",
+            "Udemy · Andre Iacono", "8 horas", "novembro de 2026", "Certificado: Banco de Dados SQL do Zero ao Avançado, Udemy")
+certificado("certificado-claude.svg", "inteligência artificial", "Mastering Claude Cowork, Claude Design & AI Agents",
+            "Udemy · Ryan Ahmed, Stemplicity", "8,5 horas", "novembro de 2026", "Certificado: Mastering Claude Cowork, Claude Design & AI Agents, Udemy")
