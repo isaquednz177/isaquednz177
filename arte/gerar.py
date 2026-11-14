@@ -13,8 +13,14 @@ from base import (GOTICA, MARROM_LINHA, OSSO, PASTA, PRETO_2, SANGUE, SANGUE_CLA
                   floreio, morcego, ogiva, placa, quadrifolio, rosacea, rosacea_mini, salvar, textura, torre)
 
 
+# O servidor de imagens do GitHub guarda cada arquivo pelo NOME (ignora ?v=) por um tempo.
+# Mudou alguma arte? Suba a VERSAO: os arquivos ganham nome novo e o README precisa
+# apontar para eles (troque "-v3.svg" pelo número novo no README.md).
+VERSAO = 3
+
+
 def saida(nome):
-    return os.path.join(PASTA, nome)
+    return os.path.join(PASTA, nome.replace(".svg", f"-v{VERSAO}.svg"))
 
 
 # ---------------------------------------------------------------- cabeçalho
