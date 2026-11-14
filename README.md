@@ -58,19 +58,6 @@ const billy = {
 
 </div>
 
-<p align="center"><img src="arte/titulo-estatisticas.svg" alt="Estatísticas do GitHub" width="100%" /></p>
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=isaquednz177&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0B0709&title_color=D9B36C&icon_color=8A3F50&text_color=E8E2D6&ring_color=D9B36C" alt="estatísticas" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=isaquednz177&layout=compact&langs_count=8&hide_border=true&bg_color=0B0709&title_color=D9B36C&text_color=E8E2D6" alt="linguagens mais usadas" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=isaquednz177&hide_border=true&background=0B0709&ring=D9B36C&fire=8A3F50&currStreakNum=E8E2D6&currStreakLabel=D9B36C&sideNums=E8E2D6&sideLabels=D9B36C&dates=8C6A35&stroke=3A1119" alt="dias seguidos de commits" />
-
-</div>
-
 <p align="center"><img src="arte/titulo-serpente.svg" alt="A serpente comendo meus commits" width="100%" /></p>
 
 <div align="center">
