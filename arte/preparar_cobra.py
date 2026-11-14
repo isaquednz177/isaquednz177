@@ -2,9 +2,9 @@
 
 Gera em arte/pecas/:
   cobra-moldura.webp  a moldura com a grade de exemplo apagada (a grade de verdade entra por cima)
-  cobra-dragao.webp   só o dragão (inteiro)
-  dragao-*.webp       o dragão em camadas para a animação: asa, corpo, rabo, ponta do rabo e cabeça
-                      (todas do mesmo tamanho; os cortes se sobrepõem uns pixels, para não aparecer emenda)
+
+O dragão da arte também é apagado da moldura: quem voa pela grade agora são os quadros do
+arte/preparar_dragao.py.
 
 Uso:  python arte/preparar_cobra.py   (precisa de opencv-python; a automação usa só o arte/cobra.py)
 """
@@ -12,7 +12,7 @@ import os
 
 import cv2
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
 
 PASTA = os.path.dirname(os.path.abspath(__file__))
 CORTE = (9, 180, 2164, 527)        # a moldura dentro da arte (o resto é transparente)
@@ -46,36 +46,6 @@ def dragao(arr):
     return Image.fromarray(out, "RGBA"), (m > 0), (x0, y0)
 
 
-# cortes do dragão (em pixels da arte recortada, 370 x 187)
-LINHA_ASA = [(98, 101), (140, 83), (168, 79), (190, 67), (197, 60), (203, 45), (226, 40)]  # a asa fica acima
-CORTE_RABO, CORTE_PONTA, CORTE_CABECA = 138, 92, 262  # x de cada corte
-
-
-def rampa(x, a, b):
-    """1 antes de a, 0 depois de b (corte suave)."""
-    return np.clip((b - x) / (b - a), 0, 1)
-
-
-def camadas(drag):
-    d = np.asarray(drag).astype(float)
-    h, w = d.shape[:2]
-    m = Image.new("L", (w, h), 0)
-    ImageDraw.Draw(m).polygon([(72, 0), (226, 0)] + LINHA_ASA[::-1] + [(72, 40)], fill=255)
-    asa = np.asarray(m).astype(float) / 255
-    x = np.arange(w)[None, :].repeat(h, 0).astype(float)
-    a = d[..., 3] / 255
-    resto = a * (1 - asa)
-    alfas = {
-        "asa": a * asa,
-        "ponta": resto * rampa(x, CORTE_PONTA - 4, CORTE_PONTA + 4),
-        "rabo": resto * rampa(x, CORTE_RABO - 4, CORTE_RABO + 4) * (1 - rampa(x, CORTE_PONTA - 8, CORTE_PONTA)),
-        "corpo": resto * (1 - rampa(x, CORTE_RABO - 8, CORTE_RABO)) * rampa(x, CORTE_CABECA, CORTE_CABECA + 8),
-        "cabeca": a * (1 - rampa(x, CORTE_CABECA - 6, CORTE_CABECA + 2)),
-    }
-    return {n: Image.fromarray(np.dstack([d[..., :3], np.clip(al, 0, 1) * 255]).astype(np.uint8), "RGBA")
-            for n, al in alfas.items()}
-
-
 def moldura(arr, mascara_dragao, origem):
     x0, y0, x1, y1 = GRADE
     rgb = arr[..., :3].astype(np.uint8).copy()
@@ -100,10 +70,7 @@ def main():
     mold = moldura(arr, mascara, origem)
     saida = os.path.join(PASTA, "pecas")
     mold.crop(CORTE).save(os.path.join(saida, "cobra-moldura.webp"), quality=88, method=6)
-    drag.save(os.path.join(saida, "cobra-dragao.webp"), quality=92, method=6)
-    for nome, im in camadas(drag).items():
-        im.save(os.path.join(saida, f"dragao-{nome}.webp"), quality=92, method=6)
-    print("moldura", mold.crop(CORTE).size, "dragão", drag.size, "em", origem)
+    print("moldura", mold.crop(CORTE).size)
 
 
 if __name__ == "__main__":
