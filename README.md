@@ -9,8 +9,6 @@
 <a href="https://www.linkedin.com/in/isaque-diniz-santos-365512386/"><img src="arte/botao-linkedin.svg" alt="LinkedIn" height="42" /></a>
 &nbsp;
 <a href="mailto:isaquednz177@gmail.com"><img src="arte/botao-email.svg" alt="E-mail" height="42" /></a>
-&nbsp;
-<a href="https://mfg-kohl.vercel.app"><img src="arte/botao-mfg.svg" alt="MFG, meu site" height="42" /></a>
 
 <br/><br/>
 
@@ -38,7 +36,6 @@ const billy = {
 
 > ✠ &nbsp;Estudando **Inteligência Artificial e Engenharia de Software**<br/>
 > ✠ &nbsp;No momento: construindo **pequenos projetos** pra fixar o que aprendo na prática<br/>
-> ✠ &nbsp;Projeto principal: **[MFG](https://mfg-kohl.vercel.app)**, uma rede para quem joga, com perfil gótico e integração com a Steam<br/>
 > ✠ &nbsp;Entusiasta do **avanço tecnológico** em geral: gosto de acompanhar pra onde a coisa tá indo<br/>
 > ✠ &nbsp;Fale comigo sobre: **IA, programação e qualquer tecnologia nova**
 
